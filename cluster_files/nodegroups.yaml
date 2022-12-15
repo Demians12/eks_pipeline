@@ -13,7 +13,8 @@ managedNodeGroups:
     volumeSize: 20
     privateNetworking: true
     ssh:
-      publicKeyPath: ~/.ssh/demo3.pub 
+      allow: true
+      PublicKeyPath: ~/.ssh/demo3.pem
     iam:
       withAddonPolicies:
         imageBuilder: true

@@ -7,4 +7,7 @@ metadata:
   region: us-east-1
   version: "1.21"
 
+iam:
+  withOIDC: true
+
 availabilityZones: ["us-east-1a", "us-east-1b"]
