@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "s3_state_bucket" {
-    bucket = "demiansx-state-backend"
+    bucket = "pipeline-source-test-workshop10"
     versioning {
         enabled = true
     }
@@ -19,7 +19,7 @@ resource "aws_s3_bucket" "s3_state_bucket" {
 }
 
 resource "aws_dynamodb_table" "terraform-lock" {
-    name           = "demiansx-terraform_state"
+    name           = "pipeline-source-test-workshop10"
     read_capacity  = 5
     write_capacity = 5
     hash_key       = "LockID"

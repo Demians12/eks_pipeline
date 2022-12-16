@@ -13,14 +13,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "demiansx-state-backend"
+    bucket         = "pipeline-source-test-workshop10"
     key            = "terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-lock"
+    dynamodb_table = "pipeline-source-test-workshop10"
   }
-}
-
-# Create a VPC
-resource "aws_vpc" "example" {
-  cidr_block = local.vpc_cidr
 }
