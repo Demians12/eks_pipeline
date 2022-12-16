@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "bucket" {
+resource "aws_s3_bucket" "s3_state_bucket" {
     bucket = "demiansx-state-backend"
     versioning {
         enabled = true
@@ -32,3 +32,21 @@ resource "aws_dynamodb_table" "terraform-lock" {
     }
 }
 
+resource "aws_s3_bucket_policy" "bucket_policy" {
+    bucket = aws_s3_bucket.s3_state_bucket.id
+    policy = <<EOF
+    {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "s3-object-lambda:*"
+            ],
+            "Resource": "arn:aws:s3:::demiansx-state-backend"
+        }
+    ]
+}
+EOF
+}
