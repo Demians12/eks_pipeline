@@ -7,15 +7,18 @@ terraform {
   }
 }
 
+locals {
+  region = "us-east-1"
+}
 provider "aws" {
   region = local.region
 }
 
 terraform {
   backend "s3" {
-    bucket         = "pipeline-source-test-workshop10"
+    bucket         = "pipeline-source-test-workshop101"
     key            = "terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "pipeline-source-test-workshop10"
+    dynamodb_table = "pipeline-source-test-workshop101"
   }
 }
