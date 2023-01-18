@@ -1,4 +1,4 @@
-module "packtcluster" {
+module "ekscluster" {
   source                = "../modules/cluster"
   vpc_id                = var.vpc_id
   public_subnets        = var.public_subnet_ids

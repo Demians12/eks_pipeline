@@ -37,3 +37,4 @@ variable "workers_number_min" {
 variable "workers_number_max" {
   type = string
 }
+
