@@ -11,7 +11,7 @@ public_subnet_ids = [
 ]
 vpc_id = "vpc-xxxxxxxxxx"
 clusters_name_prefix  = "demo-clusters"
-cluster_version       = "1.18"
+cluster_version       = "1.24"
 workers_instance_type = "t3.medium"
 workers_number_min    = 2
 workers_number_max    = 3
