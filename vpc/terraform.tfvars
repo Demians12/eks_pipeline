@@ -1,5 +1,5 @@
 aws_region           = "us-east-1"
-clusters_name_prefix = "eksdemo1"
+clusters_name_prefix = "eksdemo"
 vpc_block            = "10.0.0.0/16"
 public_subnets_prefix_list = [
   "10.0.0.0/24",
